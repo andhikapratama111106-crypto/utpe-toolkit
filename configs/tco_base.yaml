@@ -1,0 +1,22 @@
+# Asumsi dasar TCO (default armada).
+assumptions:
+  harga_solar: 25200      # Rp/liter (Pertamina Dex)
+  konsumsi_bbm: 12        # liter/jam
+  upah_operator: 50000    # Rp/jam
+
+fleet:
+  - merek: "Komatsu (Premium)"
+    model: "PC200-10M0"
+    harga_beli: 1025000000
+    lifetime_jam: 10000
+    biaya_maintenance_jam: 62500
+  - merek: "SANY (China)"
+    model: "SY215C"
+    harga_beli: 600000000
+    lifetime_jam: 7000
+    biaya_maintenance_jam: 45000
+  - merek: "UTPE (Patria)"
+    model: "Product B"
+    harga_beli: 4160000000
+    lifetime_jam: 12000
+    biaya_maintenance_jam: 55000

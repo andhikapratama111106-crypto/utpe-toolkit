@@ -1,0 +1,17 @@
+name: "Pricing War UTPE vs SANY"
+kind: bertrand
+players: ["UTPE", "SANY"]
+strategies:
+  UTPE: ["Premium + Financing", "Diskon Harga"]
+  SANY: ["Harga Premium", "Harga Agresif"]
+# payoff_matrix[i][j] = [payoff_UTPE, payoff_SANY] (satuan: Rp miliar).
+# Dikalibrasi dari skenario profit di validasi_konservatif.csv.
+payoff_matrix:
+  - [[278, 100], [200, 150]]
+  - [[150, 120], [133, 133]]
+params:
+  prices: [100, 110, 120]
+  cost: 90
+  market_size: 100
+metadata:
+  calibrated_from: "validasi_konservatif.csv"

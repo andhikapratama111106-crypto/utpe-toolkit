@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+env/
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.ruff_cache/
+
+# Output artefak (jangan commit chart/laporan hasil run)
+output/*.png
+output/*.pdf
+output/*.html
+
+# Data mentah hasil scraping (opsional: aktifkan kalau tak mau commit)
+# data/raw/*.csv
+
+# OS
+.DS_Store

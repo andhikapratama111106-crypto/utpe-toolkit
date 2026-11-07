@@ -1,0 +1,25 @@
+# Parameter proyeksi finansial (Price War vs Financing).
+market:
+  total_market_units: 200
+  harga_jual_normal: 4160000000
+  harga_jual_diskon: 3328000000
+
+margin:
+  margin_kotor_produk: 0.25
+  margin_financing: 0.09              # bunga kotor
+  margin_financing_konservatif: 0.03  # share margin bersih UTPE
+  penetrasi_financing: 0.60
+  tenor_rata_rata: 3
+
+# Contoh skema penawaran (mechanism design).
+offers:
+  - name: "Standar IMFI"
+    harga: 4160000000
+    dp_pct: 0.20
+    bunga_pct: 0.09
+    tenor_bulan: 36
+  - name: "Promo DP Ringan"
+    harga: 4160000000
+    dp_pct: 0.10
+    bunga_pct: 0.11
+    tenor_bulan: 48

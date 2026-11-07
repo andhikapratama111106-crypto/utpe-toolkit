@@ -1,0 +1,13 @@
+name: "Market Entry: China entrant vs UTPE incumbent"
+kind: entry
+players:
+  - "Entrant (China)"
+  - "Incumbent (UTPE)"
+strategies:
+  "Entrant (China)": ["Masuk", "Tak Masuk"]
+  "Incumbent (UTPE)": ["Lawan", "Akomodasi"]
+params:
+  monopoly_profit: 100
+  duopoly_profit: 40
+  fight_loss: 10
+  entry_cost: 20

@@ -1,0 +1,4 @@
+source_name,source_url,scraped_at,field,value,unit,note
+pilar4_financing,https://indomobilfinance.co.id/customer/content/solusi-pembiayaan-alat-berat,2026-11-07T09:38:30+00:00,DP,20,%,IMFI; fallback
+pilar4_financing,https://indomobilfinance.co.id/customer/content/solusi-pembiayaan-alat-berat,2026-11-07T09:38:30+00:00,Bunga,9,%,IMFI flat/tahun; fallback
+pilar4_financing,https://indomobilfinance.co.id/customer/content/solusi-pembiayaan-alat-berat,2026-11-07T09:38:30+00:00,Tenor,36,bulan,IMFI; fallback

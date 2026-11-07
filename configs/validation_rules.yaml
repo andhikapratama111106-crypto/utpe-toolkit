@@ -1,0 +1,12 @@
+# Source-of-truth angka Executive Summary + toleransi validator.
+tolerance_pct: 0.5
+
+es_numbers:
+  cost_per_hour_komatsu: 517400
+  cost_per_hour_sany: 483114
+  cost_per_hour_utpe: 754067
+  profit_price_war: 133120000000
+  profit_financing_kons: 278220800000
+  npv_p50: 398000000000
+  npv_p10: 127000000000
+  npv_p90: 717000000000

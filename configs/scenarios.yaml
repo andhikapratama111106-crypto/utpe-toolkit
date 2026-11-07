@@ -1,0 +1,32 @@
+# Skenario sensitivity deterministik untuk UTPE Product B.
+scenarios:
+  - skenario: "Baseline (Case Book)"
+    harga: 4160000000
+    lifetime: 12000
+    maint: 55000
+  - skenario: "Diskon Harga 20%"
+    harga: 3328000000
+    lifetime: 12000
+    maint: 55000
+  - skenario: "Lifetime 15.000 Jam"
+    harga: 4160000000
+    lifetime: 15000
+    maint: 55000
+  - skenario: "Diskon 20% + Lifetime 15rb"
+    harga: 3328000000
+    lifetime: 15000
+    maint: 55000
+  - skenario: "Diskon 30% + Maint 40k + Lifetime 15rb"
+    harga: 2912000000
+    lifetime: 15000
+    maint: 40000
+
+monte_carlo:
+  n: 10000
+  harga_mean: 4160000000
+  harga_sd: 200000000
+  lifetime_mean: 12000
+  lifetime_sd: 1500
+  maint_mean: 55000
+  maint_sd: 5000
+  seed: 42

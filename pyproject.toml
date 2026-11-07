@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "utpe"
+version = "0.1.0"
+description = "Toolkit analisis bisnis alat berat UTPE/PATRIA: scraping, TCO, sensitivity, proyeksi finansial, game theory, dan validasi."
+readme = "README.md"
+requires-python = ">=3.9"
+license = "LicenseRef-Proprietary"
+authors = [{ name = "UTPE Research" }]
+keywords = ["utpe", "patria", "tco", "alat-berat", "game-theory"]
+
+dependencies = [
+    "click>=8.1",
+    "pyyaml>=6.0",
+    "pandas>=2.0",
+    "numpy>=1.24",
+    "requests>=2.28",
+    "beautifulsoup4>=4.11",
+    "matplotlib>=3.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "black>=23.0",
+    "ruff>=0.1",
+]
+
+[project.scripts]
+utpe = "utpe.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["utpe*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "W", "UP", "B"]
+ignore = ["E501"]
