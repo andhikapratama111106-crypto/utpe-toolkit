@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Colour variables come from lib/design-system.ts (themeCss, injected in layout.tsx). */
+
+html {
+  background: rgb(var(--c-paper));
+  color: rgb(var(--c-ink));
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  @apply bg-paper font-serif text-ink antialiased;
+  font-feature-settings: "kern", "liga", "onum" 0;
+}
+
+::selection {
+  background: rgb(var(--c-crimson) / 0.2);
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--c-ink));
+  outline-offset: 2px;
+}
+
+/* Reduced motion: no animation, no smooth scroll, no transitions. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+@media print {
+  header,
+  footer {
+    display: none;
+  }
+}
+
+/* Slider: 1px track, crimson fill, 12px ink thumb. */
+.utpe-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 12px;
+  background: transparent;
+  cursor: pointer;
+}
+.utpe-slider::-webkit-slider-runnable-track {
+  height: 2px;
+  background: linear-gradient(to right, rgb(var(--c-crimson)) var(--fill), rgb(var(--c-rule)) var(--fill));
+}
+.utpe-slider::-moz-range-track {
+  height: 2px;
+  background: rgb(var(--c-rule));
+}
+.utpe-slider::-moz-range-progress {
+  height: 2px;
+  background: rgb(var(--c-crimson));
+}
+.utpe-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 12px;
+  height: 12px;
+  margin-top: -5px;
+  border-radius: 50%;
+  background: rgb(var(--c-ink));
+  border: 0;
+}
+.utpe-slider::-moz-range-thumb {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: rgb(var(--c-ink));
+  border: 0;
+}
