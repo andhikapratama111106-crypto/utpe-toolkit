@@ -8,5 +8,5 @@ export const NAV = [
 ] as const;
 
 export const VERSION = "v0.1.0";
-export const CITATION = "TEAM ANOMALI (2026). UTPE Toolkit v0.1.0. National Business Case Competition (NBPC) 2026.";
-export const BIBTEX = `@software{utpe_toolkit_2026,\n  author = {{TEAM ANOMALI}},\n  title  = {UTPE Toolkit},\n  year   = {2026},\n  version = {0.1.0},\n  note   = {National Business Case Competition 2026}\n}`;
+export const CITATION = "TEAM TONAKO (2026). UTPE Toolkit v0.1.0. National Business Case Competition (NBPC) 2026.";
+export const BIBTEX = `@software{utpe_toolkit_2026,\n  author = {{TEAM TONAKO}},\n  title  = {UTPE Toolkit},\n  year   = {2026},\n  version = {0.1.0},\n  note   = {National Business Case Competition 2026}\n}`;

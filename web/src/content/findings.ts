@@ -6,4 +6,4 @@ export const PROFIT = {
 } as const;
 
 export const UPDATED = "2026-11-08";
-export const AUTHORS = "TEAM ANOMALI";
+export const AUTHORS = "TEAM TONAKO";

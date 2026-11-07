@@ -29,7 +29,7 @@ export function Footer() {
         </div>
       </div>
       <div className={cn(layout.container, "mt-10 border-t border-rule pt-4")}>
-        <p className="font-mono text-[11px] text-ink-faint">© 2026 TEAM ANOMALI · National Business Case Competition 2026 · {VERSION}</p>
+        <p className="font-mono text-[11px] text-ink-faint">© 2026 TEAM TONAKO · National Business Case Competition 2026 · {VERSION}</p>
       </div>
     </footer>
   );
