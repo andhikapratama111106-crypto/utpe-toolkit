@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+legacy/
+tests/
+output/
+data/raw/
+app.py
+requirements_app.txt
+web/node_modules/
+web/.next/
+web/.next/cache/
+web/.env.local

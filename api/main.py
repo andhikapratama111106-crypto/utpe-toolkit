@@ -1,27 +1,42 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
-from utpe.analysis.tco import calculate_tco, TCOConfig
+"""Entry point Vercel (vercel.json -> api/main.py): FastAPI app UTPE Toolkit."""
 
-app = FastAPI()
+import sys
+from pathlib import Path
 
+# Vercel menjalankan fungsi dari api/; paket `utpe` ada di root repo, `routers` di api/.
+_API_DIR = Path(__file__).resolve().parent
+for _p in (str(_API_DIR), str(_API_DIR.parent)):
+    if _p not in sys.path:
+        sys.path.insert(0, _p)
 
-class TCORequest(BaseModel):
-    brand: str
-    model: str
-    purchase_price: float
-    lifetime_hours: int
-    maintenance_per_hour: float
-    fuel_consumption_lph: float
-    fuel_price_per_liter: float
-    operator_wage_per_hour: float
+from fastapi import FastAPI  # noqa: E402
+from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
+from routers import game, projection, sensitivity, tco, validate  # noqa: E402
+
+VERSION = "0.1.0"
+
+app = FastAPI(title="UTPE Toolkit API", version=VERSION)
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 
 @app.get("/")
 def root():
-    return {"status": "ok", "toolkit": "utpe v0.1.0"}
+    return {"status": "ok", "toolkit": f"utpe v{VERSION}"}
 
 
-@app.post("/api/tco")
-def run_tco(req: TCORequest):
-    config = TCOConfig(**req.model_dump())
-    return calculate_tco(config)
+@app.get("/api/health")
+def health():
+    return {"ok": True, "version": VERSION}
+
+
+app.include_router(tco.router, prefix="/api/tco")
+app.include_router(sensitivity.router, prefix="/api/sensitivity")
+app.include_router(projection.router, prefix="/api/projection")
+app.include_router(game.router, prefix="/api/game")
+app.include_router(validate.router, prefix="/api/validate")

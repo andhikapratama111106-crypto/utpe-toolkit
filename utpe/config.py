@@ -24,7 +24,10 @@ PROCESSED_DIR = DATA_DIR / "processed"
 OUTPUT_DIR = PROJECT_ROOT / "output"
 
 for _d in (RAW_DIR, PROCESSED_DIR, OUTPUT_DIR):
-    _d.mkdir(parents=True, exist_ok=True)
+    try:
+        _d.mkdir(parents=True, exist_ok=True)
+    except OSError:  # filesystem read-only (Vercel) dan folder tidak ikut di-upload
+        pass
 
 # ---------------------------------------------------------------------------
 # Palette korporat UTPE
