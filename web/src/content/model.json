@@ -547,12 +547,12 @@
    "id": "S02",
    "ref": "Rhamadanty, S. (2026, 9 Januari). Kementerian ESDM pangkas RKAB tambang 2026, produksi batubara sekitar 600 juta ton. Kontan.co.id.",
    "url": "https://industri.kontan.co.id/news/kementerian-esdm-pangkas-rkab-tambang-2026-produksi-batubara-sekitar-600-juta-ton",
-   "usedFor": "RKAB awal ±600 juta ton; produksi 2024 836 & 2025 790 juta ton",
+   "usedFor": "RKAB awal ±600 juta ton; produksi 2024 836 juta ton; angka awal 2025 790 juta ton (final 817, S29)",
    "type": "Eksternal"
   },
   {
    "id": "S03",
-   "ref": "Revisi RKAB 2026 disetujui, segini kuota produksi batubara dan nikel. (2026, 18 Oktober). Kontan.co.id.",
+   "ref": "Anastasia, C. (2026b, 18 Oktober). Revisi RKAB 2026 disetujui, segini kuota produksi batubara dan nikel. Kontan.co.id.",
    "url": "https://industri.kontan.co.id/news/revisi-rkab-2026-disetujui-segini-kuota-produksi-batubara-dan-nikel",
    "usedFor": "Kuota RKAB 2026 setelah revisi ±700 juta ton (Dirjen Minerba)",
    "type": "Eksternal"
@@ -608,7 +608,7 @@
   },
   {
    "id": "S11",
-   "ref": "Sektor pertambangan dan penggalian dominasi pembiayaan alat berat multifinance. (2026, 9 Agustus). Kontan.co.id.",
+   "ref": "Saputra, F. (2026, 9 Agustus). Sektor pertambangan dan penggalian dominasi pembiayaan alat berat multifinance. Kontan.co.id.",
    "url": "https://keuangan.kontan.co.id/news/sektor-pertambangan-dan-penggalian-dominasi-pembiayaan-alat-berat-multifinance",
    "usedFor": "Data OJK: pembiayaan alat berat Rp48,65 T (Jun 2026); tambang Rp27,13 T (55,76%)",
    "type": "Eksternal"
@@ -650,7 +650,7 @@
   },
   {
    "id": "S17",
-   "ref": "Perusahaan Haji Isam pesan 2 ribu alat berat asal China SANY. (2024, 28 Juni). IDX Channel.",
+   "ref": "Fiansyah, R. (2024, 28 Juni). Perusahaan Haji Isam pesan 2 ribu alat berat asal China SANY. IDX Channel.",
    "url": "https://www.idxchannel.com/economics/perusahaan-haji-isam-pesan-2-ribu-alat-berat-asal-china-sany/all",
    "usedFor": "MoU hingga 2.000 ekskavator SANY untuk proyek pertanian",
    "type": "Eksternal"
@@ -723,6 +723,20 @@
    "ref": "Produksi batu bara RI pada 2023 cetak rekor baru 775 juta ton. (2024, 15 Januari). Bisnis.com.",
    "url": "https://ekonomi.bisnis.com/read/20240115/44/1732450/produksi-batu-bara-ri-pada-2023-cetak-rekor-baru-775-juta-ton",
    "usedFor": "Produksi batu bara 2023",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S29",
+   "ref": "Syaharani, M. (2026, 10 September). ESDM proyeksi produksi batu bara 2026 capai 720 juta ton, turun 12%. Katadata.",
+   "url": "https://katadata.co.id/berita/energi/6aa28d8016ce2/esdm-proyeksi-produksi-batu-bara-2026-capai-720-juta-ton-turun-12",
+   "usedFor": "Produksi batu bara 2025: 817 juta ton; proyeksi 2026: 720 juta ton (Dirjen Minerba)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S30",
+   "ref": "Anastasia, C. (2026a, 2 November). Harga batubara naik, Bahlil buka peluang kerek kuota produksi 2027. Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/harga-batubara-naik-bahlil-buka-peluang-kerek-kuota-produksi-2027",
+   "usedFor": "Harga batu bara >US$154/t; peluang kuota 2027 dinaikkan",
    "type": "Eksternal"
   },
   {
