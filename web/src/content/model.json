@@ -1,0 +1,799 @@
+{
+ "provenance": {
+  "file": "UTPE_PATRIA_Model_NBCC2026.xlsx",
+  "note": "Case data is dummy (Case Book); see Sources S01."
+ },
+ "years": [
+  2026,
+  2027,
+  2028,
+  2029,
+  2030,
+  2031
+ ],
+ "indicators": {
+  "npvBase": 518.436027886666,
+  "npvExTv": 6.4888120632923,
+  "peak": -141.594990202375,
+  "paybackYear": 2031,
+  "investment": 181.0,
+  "checks": "SEMUA OK (36/36)"
+ },
+ "series": {
+  "Pendapatan — strategi": [
+   1030.0,
+   1061.12361173422,
+   1175.988154078,
+   1327.99043448652,
+   1468.56415942642,
+   1558.50141488188
+  ],
+  "Pendapatan — do-nothing": [
+   1030.0,
+   978.0309792,
+   976.554387148843,
+   984.639632479628,
+   992.791818467195,
+   1001.01149933734
+  ],
+  "EBITDA — strategi": [
+   92.7,
+   71.9566515588972,
+   94.0452261347607,
+   130.535333960242,
+   154.756306066205,
+   166.365283899901
+  ],
+  "EBITDA — do-nothing": [
+   92.7,
+   67.0196840320002,
+   54.2609438706334,
+   43.5718284854304,
+   32.5420087100427,
+   21.1626106108815
+  ],
+  "Margin EBITDA — strategi": [
+   0.09,
+   0.0678117523379741,
+   0.0799712359419928,
+   0.0982953872033839,
+   0.105379329239962,
+   0.106746957244508
+  ],
+  "Margin EBITDA — do-nothing": [
+   0.09,
+   0.068525113679753,
+   0.0555636681220123,
+   0.0442515485342622,
+   0.0327782805062651,
+   0.0211412262745143
+  ],
+  "Δ Arus kas bebas": [
+   0.0,
+   -62.6505602091527,
+   -78.9444299932225,
+   34.131479008694,
+   70.5714210949562,
+   96.3279489776384
+  ]
+ },
+ "cumulativeFcf": [
+  -62.6505602091527,
+  -141.594990202375,
+  -107.463511193681,
+  -36.892090098725,
+  59.4358588789134
+ ],
+ "scenarioNames": [
+  "Base",
+  "Upside",
+  "Downside",
+  "Stress",
+  "Stress + Gate"
+ ],
+ "scenarios": {
+  "NPV inkremental": {
+   "unit": "Rp M",
+   "values": [
+    518.436027886666,
+    994.01564954179,
+    21.8903236644024,
+    -277.626884810328,
+    -70.6680082874587
+   ]
+  },
+  "NPV tanpa nilai terminal": {
+   "unit": "Rp M",
+   "values": [
+    6.4888120632923,
+    115.275003282574,
+    -132.273318570062,
+    -217.510070838842,
+    -70.6680082874587
+   ]
+  },
+  "Porsi NPV dari nilai terminal": {
+   "unit": "%",
+   "values": [
+    0.987483871270014,
+    0.884030997564563,
+    7.04254741035019,
+    0.216538157003623,
+    0
+   ]
+  },
+  "Dana puncak": {
+   "unit": "Rp M",
+   "values": [
+    -141.594990202375,
+    -120.952282139387,
+    -192.140777774338,
+    -269.287019878013,
+    -83.917315
+   ]
+  },
+  "Investasi": {
+   "unit": "Rp M",
+   "values": [
+    181,
+    181,
+    193.1,
+    211.25,
+    74.5
+   ]
+  },
+  "Pendapatan 2031 — strategi": {
+   "unit": "Rp M",
+   "values": [
+    1558.50141488188,
+    1982.64954350662,
+    1217.9379556557,
+    947.166138760625,
+    777.854486446794
+   ]
+  },
+  "Pendapatan 2031 — do-nothing": {
+   "unit": "Rp M",
+   "values": [
+    1001.01149933734,
+    1159.17740564491,
+    903.948792670801,
+    777.854486446794,
+    777.854486446794
+   ]
+  },
+  "Margin EBITDA 2031 — strategi": {
+   "unit": "%",
+   "values": [
+    0.106746957244508,
+    0.148780192988119,
+    0.0289626073228156,
+    -0.0628504919093404,
+    -0.0859089783350738
+   ]
+  },
+  "Margin EBITDA 2031 — do-nothing": {
+   "unit": "%",
+   "values": [
+    0.0211412262745143,
+    0.0488103987088498,
+    -0.0227152018399171,
+    -0.081199477858292,
+    -0.081199477858292
+   ]
+  },
+  "Δ Pendapatan kumulatif 2027–31": {
+   "unit": "Rp M",
+   "values": [
+    1659.13945797403,
+    2393.7243319495,
+    862.849766877896,
+    420.378172557928,
+    0
+   ]
+  },
+  "Δ EBITDA kumulatif 2027–31": {
+   "unit": "Rp M",
+   "values": [
+    399.101725911018,
+    662.366838247169,
+    103.923867570082,
+    -62.2952205524856,
+    -41.211195234388
+   ]
+  },
+  "Δ EBITDA 2031: pertahanan inti": {
+   "unit": "Rp M",
+   "values": [
+    95.9396080891145,
+    152.334551440755,
+    44.0998298886356,
+    12.7637789089049,
+    0
+   ]
+  },
+  "Δ EBITDA 2031: lifecycle": {
+   "unit": "Rp M",
+   "values": [
+    58.7696366435621,
+    84.0945390514335,
+    36.4995069365645,
+    23.4840092857789,
+    0
+   ]
+  },
+  "Δ EBITDA 2031: logistik": {
+   "unit": "Rp M",
+   "values": [
+    22.9531026367424,
+    34.4296539551136,
+    9.75506862061551,
+    4.01679296142991,
+    0
+   ]
+  },
+  "Δ EBITDA 2031: biaya program": {
+   "unit": "Rp M",
+   "values": [
+    -32.4596740804,
+    -32.4596740804,
+    -34.54636741414,
+    -36.63306074788,
+    -3.663306074788
+   ]
+  }
+ },
+ "monteCarlo": {
+  "n": 10000,
+  "seed": 20261106,
+  "p10": 127.1308758048751,
+  "p50": 398.03380666677754,
+  "p90": 717.4357279242422,
+  "pNegative": 0.0199,
+  "min": -204.300393372113,
+  "max": 1526.18688380904,
+  "bins": [
+   {
+    "x0": -300.0,
+    "x1": -262.5,
+    "count": 0
+   },
+   {
+    "x0": -262.5,
+    "x1": -225.0,
+    "count": 0
+   },
+   {
+    "x0": -225.0,
+    "x1": -187.5,
+    "count": 1
+   },
+   {
+    "x0": -187.5,
+    "x1": -150.0,
+    "count": 6
+   },
+   {
+    "x0": -150.0,
+    "x1": -112.5,
+    "count": 14
+   },
+   {
+    "x0": -112.5,
+    "x1": -75.0,
+    "count": 28
+   },
+   {
+    "x0": -75.0,
+    "x1": -37.5,
+    "count": 51
+   },
+   {
+    "x0": -37.5,
+    "x1": 0.0,
+    "count": 99
+   },
+   {
+    "x0": 0.0,
+    "x1": 37.5,
+    "count": 163
+   },
+   {
+    "x0": 37.5,
+    "x1": 75.0,
+    "count": 205
+   },
+   {
+    "x0": 75.0,
+    "x1": 112.5,
+    "count": 293
+   },
+   {
+    "x0": 112.5,
+    "x1": 150.0,
+    "count": 359
+   },
+   {
+    "x0": 150.0,
+    "x1": 187.5,
+    "count": 426
+   },
+   {
+    "x0": 187.5,
+    "x1": 225.0,
+    "count": 513
+   },
+   {
+    "x0": 225.0,
+    "x1": 262.5,
+    "count": 592
+   },
+   {
+    "x0": 262.5,
+    "x1": 300.0,
+    "count": 587
+   },
+   {
+    "x0": 300.0,
+    "x1": 337.5,
+    "count": 636
+   },
+   {
+    "x0": 337.5,
+    "x1": 375.0,
+    "count": 646
+   },
+   {
+    "x0": 375.0,
+    "x1": 412.5,
+    "count": 634
+   },
+   {
+    "x0": 412.5,
+    "x1": 450.0,
+    "count": 622
+   },
+   {
+    "x0": 450.0,
+    "x1": 487.5,
+    "count": 574
+   },
+   {
+    "x0": 487.5,
+    "x1": 525.0,
+    "count": 555
+   },
+   {
+    "x0": 525.0,
+    "x1": 562.5,
+    "count": 450
+   },
+   {
+    "x0": 562.5,
+    "x1": 600.0,
+    "count": 464
+   },
+   {
+    "x0": 600.0,
+    "x1": 637.5,
+    "count": 426
+   },
+   {
+    "x0": 637.5,
+    "x1": 675.0,
+    "count": 339
+   },
+   {
+    "x0": 675.0,
+    "x1": 712.5,
+    "count": 285
+   },
+   {
+    "x0": 712.5,
+    "x1": 750.0,
+    "count": 235
+   },
+   {
+    "x0": 750.0,
+    "x1": 787.5,
+    "count": 190
+   },
+   {
+    "x0": 787.5,
+    "x1": 825.0,
+    "count": 135
+   },
+   {
+    "x0": 825.0,
+    "x1": 862.5,
+    "count": 102
+   },
+   {
+    "x0": 862.5,
+    "x1": 900.0,
+    "count": 108
+   },
+   {
+    "x0": 900.0,
+    "x1": 937.5,
+    "count": 55
+   },
+   {
+    "x0": 937.5,
+    "x1": 975.0,
+    "count": 56
+   },
+   {
+    "x0": 975.0,
+    "x1": 1012.5,
+    "count": 46
+   },
+   {
+    "x0": 1012.5,
+    "x1": 1050.0,
+    "count": 25
+   },
+   {
+    "x0": 1050.0,
+    "x1": 1087.5,
+    "count": 24
+   },
+   {
+    "x0": 1087.5,
+    "x1": 1125.0,
+    "count": 14
+   },
+   {
+    "x0": 1125.0,
+    "x1": 1162.5,
+    "count": 13
+   },
+   {
+    "x0": 1162.5,
+    "x1": 1200.0,
+    "count": 10
+   }
+  ],
+  "clipped": 19
+ },
+ "tornado": [
+  {
+   "variable": "Faktor permintaan tambang (z)",
+   "npvP10": 418.023205031704,
+   "npvP90": 634.744584153393,
+   "range": 216.721379121689
+  },
+  {
+   "variable": "Realisasi harga (selisih vs do-nothing)",
+   "npvP10": 438.580551413143,
+   "npvP90": 648.418955041068,
+   "range": 209.838403627925
+  },
+  {
+   "variable": "Penetrasi reman",
+   "npvP10": 448.26070544142,
+   "npvP90": 604.249501565675,
+   "range": 155.988796124254
+  },
+  {
+   "variable": "Guncangan biaya baja/kurs",
+   "npvP10": 592.495067229321,
+   "npvP90": 444.37698854401,
+   "range": 148.11807868531
+  },
+  {
+   "variable": "Erosi do-nothing",
+   "npvP10": 456.386724695587,
+   "npvP90": 602.380925409909,
+   "range": 145.994200714321
+  },
+  {
+   "variable": "Design-to-cost",
+   "npvP10": 426.016833215165,
+   "npvP90": 570.495697047541,
+   "range": 144.478863832376
+  },
+  {
+   "variable": "WACC",
+   "npvP10": 577.458027687413,
+   "npvP90": 444.338714226138,
+   "range": 133.119313461275
+  },
+  {
+   "variable": "Keterlambatan (th)",
+   "npvP10": 494.215345477743,
+   "npvP90": 396.853252074651,
+   "range": 97.3620934030916
+  },
+  {
+   "variable": "Pangsa SAM logistik",
+   "npvP10": 463.508134783565,
+   "npvP90": 558.556234588368,
+   "range": 95.0480998048036
+  },
+  {
+   "variable": "Efektivitas FLEX+FAST",
+   "npvP10": 460.920711215059,
+   "npvP90": 542.607503052154,
+   "range": 81.6867918370948
+  }
+ ],
+ "samLogistics": {
+  "unit": "Rp M",
+  "values": [
+   4529.8477944,
+   4405.23923132238,
+   4248.65300046356,
+   4507.39596819179,
+   4781.89638265467
+  ],
+  "years": [
+   2027,
+   2028,
+   2029,
+   2030,
+   2031
+  ]
+ },
+ "sources": [
+  {
+   "id": "S01",
+   "ref": "PT United Tractors Pandu Engineering. (2026). When quality is no longer enough: How UTPE can win in a market-driven by price and speed [Case book, NBCC Pathseeker 2026; data dummy].",
+   "url": null,
+   "usedFor": "Data kasus: penjualan 2018–2026, tabel produk A–D, konteks",
+   "type": "Data kasus"
+  },
+  {
+   "id": "S02",
+   "ref": "Rhamadanty, S. (2026, 9 Januari). Kementerian ESDM pangkas RKAB tambang 2026, produksi batubara sekitar 600 juta ton. Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/kementerian-esdm-pangkas-rkab-tambang-2026-produksi-batubara-sekitar-600-juta-ton",
+   "usedFor": "RKAB awal ±600 juta ton; produksi 2024 836 & 2025 790 juta ton",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S03",
+   "ref": "Revisi RKAB 2026 disetujui, segini kuota produksi batubara dan nikel. (2026, 18 Oktober). Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/revisi-rkab-2026-disetujui-segini-kuota-produksi-batubara-dan-nikel",
+   "usedFor": "Kuota RKAB 2026 setelah revisi ±700 juta ton (Dirjen Minerba)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S04",
+   "ref": "Stockbit Research. (2026, 26 Oktober). UNTR 9M26: Volume penjualan emas terus mengalami pemulihan pada September 2026. Stockbit Snips.",
+   "url": "https://snips.stockbit.com/stockbit-research/untr-9m26-volume-penjualan-emas-terus-mengalami-pemulihan-pada-september-2026",
+   "usedFor": "Penjualan Komatsu UT 9M26: 3.026 unit (−17% YoY)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S05",
+   "ref": "United Tractors. (2024, 30 Juli). Kinerja semester I 2024 [Siaran pers].",
+   "url": "https://www.unitedtractors.com/en/?p=74900",
+   "usedFor": "Pangsa Komatsu 28%; pendapatan mesin konstruksi −23%, suku cadang & servis −10%; Scania & UD Trucks",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S06",
+   "ref": "United Tractors. (2026). UNTR monthly operational update YTD May 2026.",
+   "url": "https://www.unitedtractors.com/wp-content/uploads/2026/02/UNTR-Monthly-Operational-Update-YTD-May-2026.pdf",
+   "usedFor": "Pangsa pasar Komatsu YTD April 2026: 17%",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S07",
+   "ref": "Indonesia Miner. (2026, 28 Februari). United Tractors posts IDR 14.8 trillion net profit in 2025.",
+   "url": "https://indonesiaminer.com/news/detail/united-tractors-posts-idr-148-trillion-net-profit-in-2025",
+   "usedFor": "UT 2025: 4.515 unit Komatsu; pangsa 20% (alat berat tambang); suku cadang & servis Rp11,3 T",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S08",
+   "ref": "Mulyana, R. N. (2025, 25 November). Pasca melandai tahun ini, penjualan alat berat berpotensi tumbuh 5%–10% pada 2026. Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/pasca-melandai-tahun-ini-penjualan-alat-berat-berpotensi-tumbuh-5-10-pada-2026",
+   "usedFor": "Pasar alat berat 2025 ±23.000 unit; tambang 60–70% nilai; penetrasi merek China",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S09",
+   "ref": "Andi, D. (2024, 3 September). Merek China banjiri pasar, persaingan industri alat berat makin ketat. Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/merek-china-banjiri-pasar-persaingan-industri-alat-berat-makin-ketat",
+   "usedFor": "Bea masuk 0% (FTA) unit China vs bea bahan baku lokal 5–15%; unit China banyak dipakai di tambang (turnkey) & proyek konstruksi (Hinabi)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S10",
+   "ref": "SANY Group. (2025, 30 September). Deals exceeding RMB 2 billion follow SANY's showcase of integrated green solutions at Mining Indonesia 2025 [Siaran pers]. PR Newswire.",
+   "url": "https://www.prnewswire.com/in/news-releases/deals-exceeding-rmb-2-billion-follow-sanys-showcase-of-integrated-green-solutions-at-mining-indonesia-2025-302571251.html",
+   "usedFor": ">43.000 unit SANY sejak 2008; 26.000 ekskavator aktif",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S11",
+   "ref": "Sektor pertambangan dan penggalian dominasi pembiayaan alat berat multifinance. (2026, 9 Agustus). Kontan.co.id.",
+   "url": "https://keuangan.kontan.co.id/news/sektor-pertambangan-dan-penggalian-dominasi-pembiayaan-alat-berat-multifinance",
+   "usedFor": "Data OJK: pembiayaan alat berat Rp48,65 T (Jun 2026); tambang Rp27,13 T (55,76%)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S12",
+   "ref": "Jumar, H. (2026, 15 Juli). Jelang Zero ODOL 2027, Kemenhub temukan 140.309 pelanggaran truk lewat ETLE. Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/jelang-zero-odol-2027-kemenhub-temukan-140309-pelanggaran-truk-lewat-etle",
+   "usedFor": "Uji ETLE Jan–Jun 2026: 140.309 pelanggaran, 82.158 muatan lebih",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S13",
+   "ref": "Werdiningsih, R. P. (2025, 6 Oktober). Tak ditunda lagi, kebijakan Zero ODOL dimulai 1 Januari 2027. Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/tak-ditunda-lagi-kebijakan-zero-odol-dimulai-1-januari-2027",
+   "usedFor": "Zero ODOL efektif 1 Januari 2027",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S14",
+   "ref": "Ikhrawinata, P. (2026, 9 September). Jelang Zero ODOL 2027, pengusaha truk minta tarif angkutan dan insentif disiapkan. Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/jelang-zero-odol-2027-pengusaha-truk-minta-tarif-angkutan-dan-insentif-disiapkan",
+   "usedFor": "APTRINDO minta dukungan peremajaan armada & normalisasi bertahap",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S15",
+   "ref": "Gempuran truk impor China tekan industri kendaraan niaga Indonesia di 2025. (2026, 26 Januari). Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/gempuran-truk-impor-china-tekan-industri-kendaraan-niaga-indonesia-di-2025",
+   "usedFor": "Penjualan ritel truk 2025: 59.303 unit (Gaikindo)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S16",
+   "ref": "Agung, F. (2024, 30 November). Program swasembada pangan berpotensi kerek industri alat berat. Kontan.co.id.",
+   "url": "https://industri.kontan.co.id/news/program-swasembada-pangan-berpotensi-kerek-industri-alat-berat",
+   "usedFor": "Proyek pangan pendorong permintaan agro (Hinabi)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S17",
+   "ref": "Perusahaan Haji Isam pesan 2 ribu alat berat asal China SANY. (2024, 28 Juni). IDX Channel.",
+   "url": "https://www.idxchannel.com/economics/perusahaan-haji-isam-pesan-2-ribu-alat-berat-asal-china-sany/all",
+   "usedFor": "MoU hingga 2.000 ekskavator SANY untuk proyek pertanian",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S18",
+   "ref": "Satria, R. P. (2026, 2 April). Menteri PU optimistis efisiensi anggaran 2026 Rp130 triliun tak ganggu pembangunan nasional. InvestorTrust.",
+   "url": "https://investortrust.id/macro/98849/menteri-pu-optimistis-efisiensi-anggaran-2026-rp-130-triliun-tak-ganggu-pembangunan-nasional",
+   "usedFor": "Realokasi belanja K/L 2026 Rp121,2–130,2 T",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S19",
+   "ref": "United Tractors (UNTR) tambah kepemilikan di Pandu Engineering. (2024, 23 Februari). Kontan.co.id.",
+   "url": "https://investasi.kontan.co.id/news/united-tractors-untr-tambah-kepemilikan-di-pandu-engineering",
+   "usedFor": "UT memiliki 99,99988% UTPE",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S20",
+   "ref": "Berkah kredit alat berat moncer, rating SAN Finance Astra naik. (2022, 13 Februari). Bisnis.com.",
+   "url": "https://finansial.bisnis.com/read/20220213/89/1499837/berkah-kredit-alat-berat-moncer-rating-san-finance-astra-naik",
+   "usedFor": "SAN Finance: pembiayaan alat berat Grup Astra",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S21",
+   "ref": "Yield acuan SBN melonjak ke 7,70%, tertinggi sejak 2020. (2026, 29 Oktober). Bisnis.com.",
+   "url": "https://market.bisnis.com/read/20261029/92/2016669/yield-acuan-sbn-melonjak-ke-770-tertinggi-sejak-2020",
+   "usedFor": "Imbal hasil SBN 10 tahun 7,70% (dasar WACC & diskonto pelanggan)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S22",
+   "ref": "Triatra. (t.t.). Vessel & trailer.",
+   "url": "https://www.triatra.co.id/vessel-trailer",
+   "usedFor": "Lini PATRIA: low bed, flat bed, semi-trailer tipper, vessel",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S23",
+   "ref": "Produksi batu bara 2018 tembus 548,58 juta ton. (2019, 18 Februari). Bisnis.com.",
+   "url": "https://ekonomi.bisnis.com/read/20190218/44/890118/produksi-batu-bara-2018-tembus-54858-juta-ton",
+   "usedFor": "Produksi batu bara 2018",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S24",
+   "ref": "Kusnandar, V. B. (2021, 16 November). Indonesia's coal production down 9% in 2020. Databoks.",
+   "url": "https://databoks.katadata.co.id/en/energy/statistics/87322ceadefc672/indonesias-coal-production-down-9-in-2020",
+   "usedFor": "Produksi batu bara 2019 (616,2) & 2020 (562,5)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S25",
+   "ref": "ESDM targetkan produksi batu bara tahun ini 663 juta ton, naik 6,1%. (2022, 13 Januari). Katadata.",
+   "url": "https://katadata.co.id/berita/energi/61df8f960186e/esdm-targetkan-produksi-batu-bara-tahun-ini-663-juta-ton-naik-6-1",
+   "usedFor": "Produksi batu bara 2021: 614 juta ton",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S26",
+   "ref": "Kementerian ESDM. (2023, 29 November). Produksi batubara Indonesia tembus 686 juta ton.",
+   "url": "https://esdm.go.id/id/media-center/arsip-berita/produksi-batubara-indonesia-tembus-686-juta-ton",
+   "usedFor": "Produksi batu bara 2022: 687 juta ton (686 juta ton = realisasi 2023 per 27 Nov 2023)",
+   "type": "Eksternal"
+  },
+  {
+   "id": "S27",
+   "ref": "Produksi batu bara RI pada 2023 cetak rekor baru 775 juta ton. (2024, 15 Januari). Bisnis.com.",
+   "url": "https://ekonomi.bisnis.com/read/20240115/44/1732450/produksi-batu-bara-ri-pada-2023-cetak-rekor-baru-775-juta-ton",
+   "usedFor": "Produksi batu bara 2023",
+   "type": "Eksternal"
+  },
+  {
+   "id": "A01",
+   "ref": "Anderson, J. C., Narus, J. A., & van Rossum, W. (2006). Customer value propositions in business markets. Harvard Business Review, 84(3), 90–99.",
+   "url": null,
+   "usedFor": "Kerangka penjualan berbasis nilai (TCO selling)",
+   "type": "Teori"
+  },
+  {
+   "id": "A02",
+   "ref": "Baines, T. S., Lightfoot, H. W., Benedettini, O., & Kay, J. M. (2009). The servitization of manufacturing: A review of literature and reflection on future challenges. Journal of Manufacturing Technology Management, 20(5), 547–567.",
+   "url": "https://doi.org/10.1108/17410380910960984",
+   "usedFor": "Servitisasi manufaktur",
+   "type": "Teori"
+  },
+  {
+   "id": "A03",
+   "ref": "Cohen, M. A., Agrawal, N., & Agrawal, V. (2006). Winning in the aftermarket. Harvard Business Review, 84(5), 129–138.",
+   "url": null,
+   "usedFor": "Ekonomi aftermarket",
+   "type": "Teori"
+  },
+  {
+   "id": "A04",
+   "ref": "Ellram, L. M. (1995). Total cost of ownership: An analysis approach for purchasing. International Journal of Physical Distribution & Logistics Management, 25(8), 4–23.",
+   "url": "https://doi.org/10.1108/09600039510099928",
+   "usedFor": "Metode TCO",
+   "type": "Teori"
+  },
+  {
+   "id": "A05",
+   "ref": "Gebauer, H., Fleisch, E., & Friedli, T. (2005). Overcoming the service paradox in manufacturing companies. European Management Journal, 23(1), 14–26.",
+   "url": "https://doi.org/10.1016/j.emj.2004.12.006",
+   "usedFor": "Risiko service paradox",
+   "type": "Teori"
+  },
+  {
+   "id": "A06",
+   "ref": "Stalk, G., Jr. (1988). Time—The next source of competitive advantage. Harvard Business Review, 66(4), 41–51.",
+   "url": null,
+   "usedFor": "Persaingan berbasis waktu (lead time)",
+   "type": "Teori"
+  },
+  {
+   "id": "A07",
+   "ref": "Zook, C., & Allen, J. (2001). Profit from the core: Growth strategy in an era of turbulence. Harvard Business School Press.",
+   "url": null,
+   "usedFor": "Ekspansi adjacency dari inti",
+   "type": "Teori"
+  },
+  {
+   "id": "A08",
+   "ref": "Baghai, M., Coley, S., & White, D. (1999). The alchemy of growth. Perseus Books.",
+   "url": null,
+   "usedFor": "Tiga horizon pertumbuhan",
+   "type": "Teori"
+  },
+  {
+   "id": "A09",
+   "ref": "Christensen, C. M. (1997). The innovator's dilemma: When new technologies cause great firms to fail. Harvard Business School Press.",
+   "url": null,
+   "usedFor": "Disrupsi segmen bawah",
+   "type": "Teori"
+  },
+  {
+   "id": "A10",
+   "ref": "Porter, M. E. (1985). Competitive advantage: Creating and sustaining superior performance. Free Press.",
+   "url": null,
+   "usedFor": "Strategi generik",
+   "type": "Teori"
+  }
+ ]
+}
