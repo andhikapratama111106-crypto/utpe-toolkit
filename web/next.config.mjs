@@ -4,6 +4,8 @@ const proxy = process.env.API_PROXY_URL;
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // vercel.json memakai `builds` + rute ke web/$1; aset /_next/static/immutable/* tidak terjangkau (404).
+  supportsImmutableAssets: false,
   async rewrites() {
     return proxy ? [{ source: "/api/:path*", destination: `${proxy}/api/:path*` }] : [];
   },
