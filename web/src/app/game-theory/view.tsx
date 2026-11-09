@@ -1,7 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { PageHeader, Panel, Stat, axis, tooltipStyle } from "@/components/ui";
+import { Note, PageHeader, Panel, Stat, axis, tooltipStyle } from "@/components/ui";
 import { api, arr, isNum, numAt, rec, useLive } from "@/lib/api";
 import { GAME, GAME_FALLBACK, KEY } from "@/lib/data";
 
@@ -40,6 +40,10 @@ export function GameView() {
         lead="Model Bertrand UTPE lawan SANY. Titik Nash adalah pasangan strategi yang tidak ingin diubah sepihak oleh siapa pun."
         source={source}
       />
+      <Note>
+        Ilustrasi. Payoff dari configs/games/pricing_war.yaml: dua payoff UTPE berasal dari modul proyeksi, sisanya asumsi; payoff SANY
+        bukan data.
+      </Note>
       <div className="grid g3">
         <Stat label="Nash equilibrium" tint="orange" hint="(UTPE, SANY), Rp miliar">
           ({nash.payoff[0]}, {nash.payoff[1]})

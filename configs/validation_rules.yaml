@@ -10,3 +10,12 @@ es_numbers:
   npv_p50: 398000000000
   npv_p10: 127000000000
   npv_p90: 717000000000
+
+# Modul Biaya per Tahun (Lampiran A, Tabel A2/A4), persen; toleransi absolut 0,5 poin persen.
+eac_pct:
+  selisih_eac_A: -36.0
+  selisih_eac_B: -8.0
+  selisih_eac_C: -2.0
+  selisih_eac_D: -40.0
+  diskonto_impas_C: 13.3
+eac_tolerance_pp: 0.5

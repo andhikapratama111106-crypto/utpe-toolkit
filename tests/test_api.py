@@ -12,7 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parent.parent / "api"))
 from main import app  # noqa: E402
 
 
-def call(method: str, path: str, body: dict | None = None) -> tuple[int, dict]:
+def call(method: str, path: str, body: dict | None = None, query: str = "") -> tuple[int, dict]:
     payload = json.dumps(body).encode() if body is not None else b""
     sent: list[dict] = []
 
@@ -27,7 +27,7 @@ def call(method: str, path: str, body: dict | None = None) -> tuple[int, dict]:
         "method": method,
         "path": path,
         "raw_path": path.encode(),
-        "query_string": b"",
+        "query_string": query.encode(),
         "headers": [(b"content-type", b"application/json")],
         "server": ("127.0.0.1", 8000),
         "client": ("127.0.0.1", 1),
@@ -53,7 +53,7 @@ TCO_BODY = {
 
 
 def test_health():
-    assert call("GET", "/api/health") == (200, {"ok": True, "version": "0.1.0"})
+    assert call("GET", "/api/health") == (200, {"ok": True, "version": "0.2.0"})
 
 
 def test_tco():
@@ -96,4 +96,23 @@ def test_validate():
     s, r = call("GET", "/api/validate")
     assert s == 200
     assert r["passed"] is True
-    assert len(r["checks"]) == 5
+    assert len(r["checks"]) == 10
+    assert all(c["status"] == "OK" for c in r["checks"])
+
+
+def test_eac():
+    s, r = call("GET", "/api/eac")
+    assert s == 200
+    by = {p["produk"]: p for p in r["produk"]}
+    assert round(by["B"]["selisih_eac"] * 100, 1) == -8.1
+    assert round(by["C"]["diskonto_impas"] * 100, 1) == 13.3
+    s, r = call("GET", "/api/eac", query="r=0.14")
+    assert s == 200 and {p["produk"]: p for p in r["produk"]}["C"]["selisih_eac"] > 0
+    assert call("GET", "/api/eac", query="r=0.9")[0] == 422
+
+
+def test_eac_discount():
+    s, r = call("GET", "/api/eac/discount", query="discount=0.2&margin=0.3")
+    assert s == 200
+    assert round(r["volume_impas"], 2) == 3.0
+    assert call("GET", "/api/eac/discount", query="discount=1.5")[0] == 422

@@ -1,6 +1,7 @@
 "use client";
 import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { CountUp, PageHeader, Panel, Stat, axis, tooltipStyle } from "@/components/ui";
+import Link from "next/link";
+import { CountUp, Note, PageHeader, Panel, Stat, axis, tooltipStyle } from "@/components/ui";
 import { api, isNum, numAt, rec, useLive } from "@/lib/api";
 import { KEY, PROJECTION_FALLBACK, miliar, num } from "@/lib/data";
 
@@ -34,15 +35,21 @@ export function ProjectionView() {
     <div className="wrap">
       <PageHeader
         eyebrow="Proyeksi finansial"
-        title="Financing mengalahkan perang harga."
-        lead="Diskon 20% menjual lebih banyak unit tetapi memangkas margin. Pembiayaan menjaga harga dan menambah laba bunga."
+        title="Perang harga memangkas laba lebih cepat daripada menambah volume."
+        lead="Perbandingan satu periode untuk ilustrasi. Nilai FLEX bagi UTPE berasal dari volume, harga yang terjaga, servis, dan reman, bukan dari bunga."
         source={source}
       />
+      <Note>
+        Volume Financing (220 unit) melebihi pasar dasar 200, dan sepertiga tambahan profit berasal dari margin pembiayaan yang dalam
+        struktur FLEX menjadi milik SAN Finance; karena itu angka di halaman ini tidak dipakai di Executive Summary. Uji yang sejenis
+        (volume sama, tanpa bunga): <Link href="/biaya-per-tahun#diskon">diskon vs volume</Link> — diskon 20% menurunkan kontribusi
+        per unit 67%, sehingga volume harus naik 3×.
+      </Note>
       <div className="grid g3">
         <Stat label="Profit Price War" tint="orange" hint="Diskon 20%, 160 unit">
           <CountUp value={data.price_war.profit / 1e9} format={(n) => miliar(n * 1e9)} />
         </Stat>
-        <Stat label="Profit Financing" tint="green" hint="Konservatif 3%, 220 unit" delay={0.08}>
+        <Stat label="Profit Financing" tint="green" hint="Konservatif 3%, 220 unit (> pasar 200)" delay={0.08}>
           <CountUp value={data.financing.profit / 1e9} format={(n) => miliar(n * 1e9)} />
         </Stat>
         <Stat

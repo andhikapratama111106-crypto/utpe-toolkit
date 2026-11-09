@@ -1,6 +1,6 @@
 from fastapi import APIRouter, HTTPException
-from utpe.analysis import projection, tco
-from utpe.reporting.validator import validate_projection, validate_tco
+from utpe.analysis import eac, projection, tco
+from utpe.reporting.validator import validate_eac, validate_projection, validate_tco
 
 router = APIRouter()
 
@@ -10,7 +10,7 @@ def run_validate():
     try:
         results = validate_tco(tco.run_fleet()) + validate_projection(
             projection.compare(konservatif=True)
-        )
+        ) + validate_eac(eac.tabel())
         return {
             "passed": not any(r.status in ("FAIL", "MISSING") for r in results),
             "checks": [

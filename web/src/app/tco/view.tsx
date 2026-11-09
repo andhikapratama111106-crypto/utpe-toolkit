@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { Bar, BarChart, CartesianGrid, Cell, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { CountUp, PageHeader, Panel, Stat, axis, tooltipStyle } from "@/components/ui";
+import Link from "next/link";
+import { CountUp, Note, PageHeader, Panel, Stat, axis, tooltipStyle } from "@/components/ui";
 import { api, numAt, rec, useLive } from "@/lib/api";
 import { ASSUME, FLEET, miliar, num, rp, tcoCalc, type Unit } from "@/lib/data";
 
@@ -59,9 +60,12 @@ export function TcoView() {
       <PageHeader
         eyebrow="Total Cost of Ownership"
         title="Biaya per jam, apa adanya."
-        lead="Harga beli, BBM, maintenance, dan operator, dibagi umur pakai. UTPE lebih mahal per jam, tetapi umurnya lebih panjang."
+        lead="Harga beli, BBM, maintenance, dan operator, dibagi umur pakai dalam jam. Dipertahankan untuk keterlacakan; perbandingan produk sejenis ada di Biaya per Tahun."
         source={fleet.source}
       />
+      <Note>
+        Catatan komparabilitas: profil Komatsu PC200 dan SANY SY215C adalah ekskavator ±20 ton, sedangkan Product B di konfigurasi ini Rp4,16 miliar. Perhitungan per jam tanpa nilai sisa dan diskonto. Perbandingan produk sejenis ada di halaman <Link href="/biaya-per-tahun">Biaya per Tahun</Link>.
+      </Note>
       <div className="grid g3">
         {rows.map((r, i) => (
           <Stat key={r.merek} label={r.merek} unit="Rp/jam" tint={i === 2 ? "accent" : "purple"} hint={`${r.model} · total ${miliar(r.total)}`} delay={i * 0.08}>

@@ -3,7 +3,8 @@ import { PageHeader, Panel, Stat } from "@/components/ui";
 import { api, arr, isNum, numAt, rec, useLive } from "@/lib/api";
 import { VALIDATE_FALLBACK, num, type Check } from "@/lib/data";
 
-const fmt = (v: number | null) => (v === null ? "-" : num(v));
+const fmt = (v: number | null) =>
+  v === null ? "-" : Math.abs(v) < 1000 ? v.toLocaleString("id-ID", { maximumFractionDigits: 1 }).replace("-", "−") : num(v);
 
 export function ValidateView() {
   const { data, source } = useLive(
@@ -28,7 +29,7 @@ export function ValidateView() {
       <PageHeader
         eyebrow="Validasi"
         title={data.passed ? "Semua angka konsisten." : "Ada angka yang tidak cocok."}
-        lead="Hasil analisis dicocokkan dengan angka Executive Summary. Toleransi 0,5%."
+        lead="Hasil analisis dicocokkan dengan angka Executive Summary. Toleransi 0,5% untuk angka rupiah, 0,5 poin persen untuk biaya per tahun."
         source={source}
       />
       <div className="grid g3">

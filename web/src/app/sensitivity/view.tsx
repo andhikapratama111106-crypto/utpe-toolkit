@@ -1,7 +1,8 @@
 "use client";
 import { useState } from "react";
 import { Bar, BarChart, CartesianGrid, Cell, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
-import { CountUp, PageHeader, Panel, Stat, axis, tooltipStyle } from "@/components/ui";
+import Link from "next/link";
+import { CountUp, Note, PageHeader, Panel, Stat, axis, tooltipStyle } from "@/components/ui";
 import { api, arr, numAt, rec, useLive } from "@/lib/api";
 import { MC_FALLBACK, SCENARIOS_FALLBACK, num, rp } from "@/lib/data";
 
@@ -39,6 +40,9 @@ export function SensitivityView() {
         lead="Lima skenario harga, lifetime, dan maintenance, lalu Monte Carlo untuk melihat sebaran cost per jam."
         source={source}
       />
+      <Note>
+        Catatan komparabilitas: profil Komatsu PC200 dan SANY SY215C adalah ekskavator ±20 ton, sedangkan Product B di konfigurasi ini Rp4,16 miliar. Perhitungan per jam tanpa nilai sisa dan diskonto. Perbandingan produk sejenis ada di halaman <Link href="/biaya-per-tahun">Biaya per Tahun</Link>.
+      </Note>
       <div className="grid g3">
         <Stat label="Baseline" unit="Rp/jam" hint="Case Book">
           <CountUp value={base} format={num} />

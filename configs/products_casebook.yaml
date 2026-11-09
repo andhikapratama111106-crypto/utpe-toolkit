@@ -1,0 +1,14 @@
+# Data produk Case Book (Supporting Data I) untuk modul Biaya per Tahun.
+# Harga dalam Rp miliar, umur dalam tahun. Sama dengan Tabel A1 Executive Summary.
+produk:
+  A: {harga_patria: 1.2,  umur_patria: 10, harga_china: 0.9,  umur_china: 3.5}
+  B: {harga_patria: 4.1,  umur_patria: 15, harga_china: 3.7,  umur_china: 10}
+  C: {harga_patria: 0.8,  umur_patria: 12, harga_china: 0.6,  umur_china: 7}
+  D: {harga_patria: 0.17, umur_patria: 7,  harga_china: 0.15, umur_china: 3}
+# Varian design-to-cost Produk C (Executive Summary bagian 2.2).
+c_essential: {harga: 0.68, umur: 10}
+diskonto: 0.12            # tingkat diskonto pelanggan (Lampiran A)
+flex:
+  tenor: 4                # sewa-beli 4 tahun
+  nilai_sisa_dijamin: 0.80  # x nilai buku garis lurus di akhir tenor
+margin_kontribusi: 0.30   # 1 - rasio biaya variabel 70% (Tabel B1a, I03)

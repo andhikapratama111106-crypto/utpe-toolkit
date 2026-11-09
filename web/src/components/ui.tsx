@@ -87,6 +87,15 @@ export function SourceBadge({ source }: { source: Source }) {
   );
 }
 
+/** Catatan metodologi/komparabilitas yang harus terbaca sebelum angka. */
+export function Note({ children }: { children: ReactNode }) {
+  return (
+    <Reveal>
+      <p className="note" role="note">{children}</p>
+    </Reveal>
+  );
+}
+
 export function Panel({ title, note, children, delay = 0 }: { title: string; note?: string; children: ReactNode; delay?: number }) {
   return (
     <Reveal delay={delay}>

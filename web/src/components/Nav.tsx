@@ -7,6 +7,7 @@ import { api, rec, useLive } from "@/lib/api";
 
 const LINKS = [
   { href: "/", label: "Home" },
+  { href: "/biaya-per-tahun", label: "Biaya/Tahun" },
   { href: "/tco", label: "TCO" },
   { href: "/sensitivity", label: "Sensitivity" },
   { href: "/projection", label: "Projection" },
@@ -71,7 +72,7 @@ export function Shell({ children }: { children: ReactNode }) {
         </div>
       </nav>
       <main>{children}</main>
-      <footer className="foot">UTPE Toolkit · analisis TCO, sensitivity, proyeksi, dan game theory</footer>
+      <footer className="foot">UTPE Toolkit v0.2.0 · NBCC 2026, Tim Tonako · biaya per tahun, TCO, sensitivity, proyeksi, game theory</footer>
     </MotionConfig>
   );
 }

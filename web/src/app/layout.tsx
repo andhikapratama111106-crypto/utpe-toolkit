@@ -5,7 +5,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: { default: "UTPE Toolkit", template: "%s · UTPE Toolkit" },
-  description: "Analisis bisnis alat berat UTPE: TCO, sensitivity, proyeksi, game theory, validasi.",
+  description: "Analisis bisnis alat berat UTPE: biaya per tahun (EAC/FLEX), TCO, sensitivity, proyeksi, game theory, validasi.",
 };
 
 // Tema tersimpan dibaca sebelum render supaya tidak berkedip; default dark.

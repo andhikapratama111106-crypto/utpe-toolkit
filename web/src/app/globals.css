@@ -90,6 +90,9 @@ a.card:hover { background: var(--elev); }
 .tint-accent { color: var(--accent); } .tint-green { color: var(--green); } .tint-purple { color: var(--purple); } .tint-orange { color: var(--orange); }
 
 .chart { margin-top: 16px; }
+.note { border: 1px solid var(--line); border-left: 3px solid var(--orange); background: var(--elev); border-radius: 14px; padding: 14px 18px; font-size: 14px; line-height: 1.5; color: var(--text); margin: 0 0 24px; max-width: 860px; }
+.note a { color: var(--accent); }
+.tbl .hl td { background: color-mix(in srgb, var(--orange) 10%, transparent); }
 .tbl { width: 100%; border-collapse: collapse; font-size: 15px; font-variant-numeric: tabular-nums; }
 .tbl th { text-align: left; color: var(--muted); font-weight: 500; font-size: 13px; padding: 0 12px 12px 0; }
 .tbl td { padding: 14px 12px 14px 0; border-top: 1px solid var(--line); }

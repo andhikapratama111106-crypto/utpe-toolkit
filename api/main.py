@@ -11,9 +11,9 @@ for _p in (str(_API_DIR), str(_API_DIR.parent)):
 
 from fastapi import FastAPI  # noqa: E402
 from fastapi.middleware.cors import CORSMiddleware  # noqa: E402
-from routers import game, projection, sensitivity, tco, validate  # noqa: E402
+from routers import eac, game, projection, sensitivity, tco, validate  # noqa: E402
 
-VERSION = "0.1.0"
+VERSION = "0.2.0"
 
 app = FastAPI(title="UTPE Toolkit API", version=VERSION)
 
@@ -35,6 +35,7 @@ def health():
     return {"ok": True, "version": VERSION}
 
 
+app.include_router(eac.router, prefix="/api/eac")
 app.include_router(tco.router, prefix="/api/tco")
 app.include_router(sensitivity.router, prefix="/api/sensitivity")
 app.include_router(projection.router, prefix="/api/projection")

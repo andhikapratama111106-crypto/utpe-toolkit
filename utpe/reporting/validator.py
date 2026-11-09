@@ -22,6 +22,17 @@ ES_NUMBERS: dict[str, float] = {
     "npv_p90": 717_000_000_000,
 }
 
+# Angka Lampiran A (Tabel A2/A4) Executive Summary, dalam persen. Dibandingkan dengan
+# toleransi absolut (poin persen) karena tabel dokumen dibulatkan.
+ES_EAC_PCT: dict[str, float] = {
+    "selisih_eac_A": -36.0,
+    "selisih_eac_B": -8.0,
+    "selisih_eac_C": -2.0,
+    "selisih_eac_D": -40.0,
+    "diskonto_impas_C": 13.3,
+}
+EAC_TOLERANCE_PP = 0.5
+
 
 @dataclass
 class CheckResult:
@@ -49,6 +60,30 @@ def compare(
     else:
         status = "FAIL"
     return CheckResult(label, csv_val, es_val, status, diff_pct)
+
+
+def compare_pp(label: str, val: float | None, es_val: float, tol_pp: float = EAC_TOLERANCE_PP) -> CheckResult:
+    """Bandingkan nilai persen dengan toleransi absolut (poin persen)."""
+    if val is None:
+        return CheckResult(label, None, es_val, "MISSING")
+    diff = abs(val - es_val)
+    status = "OK" if diff <= tol_pp else ("WARN" if diff <= 2 else "FAIL")
+    return CheckResult(label, val, es_val, status, diff)
+
+
+def validate_eac(rows: list[dict], rules: dict | None = None) -> list[CheckResult]:
+    """Cek modul Biaya per Tahun (utpe.analysis.eac.tabel) terhadap Lampiran A."""
+    rules = rules or ES_EAC_PCT
+    by = {r["produk"]: r for r in rows}
+    results = []
+    for k in ("A", "B", "C", "D"):
+        val = by[k]["selisih_eac"] * 100 if k in by else None
+        results.append(compare_pp(f"Biaya per tahun: selisih EAC Produk {k} (%)", val, rules[f"selisih_eac_{k}"]))
+    be = by.get("C", {}).get("diskonto_impas")
+    results.append(
+        compare_pp("Biaya per tahun: diskonto impas Produk C (%)", be * 100 if be is not None else None, rules["diskonto_impas_C"])
+    )
+    return results
 
 
 def validate_tco(df, rules: dict | None = None) -> list[CheckResult]:
